@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Achievements - OMPSA</title>
+  <link rel="stylesheet" href="faculty and staff.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <script type="module" src="faculty and staff.js" defer></script>
+  <body>
+    <header>
+      <h1>
+        <img src="https://scontent.fcrk3-4.fna.fbcdn.net/v/t39.30808-6/489968262_1871962910203940_2278342868189935120_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFMT_WR5OfifzwXR-2CGKPtVOUreYZN0FVU5St5hk3QVcJU5DIZcqzWIG1t_zq0yEgKTU3kkKQi_TW59_jH-3SR&_nc_ohc=IAcdjHxV1bkQ7kNvwGzEPFd&_nc_oc=AdlCzh2Qz1RsqAQRSbN6xZ7qA5DTd9qeyTMYgduGtA4f2nj1ZJoUz3oTE5l7JEt4qsY&_nc_zt=23&_nc_ht=scontent.fcrk3-4.fna&_nc_gid=Y0ek-GGZr1vb129ODoyqbA&oh=00_AfEtnYUzqU4se4bbkNhfqEMXw91Tk4D5n_8ayU1JPA6H7g&oe=67FE37B6" alt="Logo" width="30" height="30">
+        OUR MOTHER OF PERPETUAL SUCCOR ACADEMY
+      </h1>
+      <div class="profile">
+        <img src="profile.jpg" alt="Profile">
+        <span>Rosas, Carmina M.</span>
+      </div>
+    </header>
+  
+    <input type="checkbox" id="toggle">
+  <label class="hamburger" for="toggle">
+    <span></span>
+    <span></span>
+    <span></span>
+  </label>
+  
+  <div class="sidebar">
+    <a href="Home.html"><i class="fas fa-house"></i> Home</a>
+    <a href="Photos.html"><i class="fas fa-image"></i> Photos</a>
+    <a href="Videos.html"><i class="fas fa-video"></i> Videos</a>
+    <a href="Prayers.html"><i class="fas fa-hands-praying"></i> Prayers</a>
+    <div class="admin-contact">
+      Admin Contact:<br>
+      OMPSA@gmail.com
+  </div>
+  </div>
+  <div class="main">
+    <a href="Home.html"><div class="breadcrumb">Home > Achievements</div></a>
+  <div class="main-content">
+    <h2>Faculty & Staff</h2>
+    <div class="section-container"><div class="section-title">Former Directors and Principals</div><div class="grid" id="formerDirectors"></div></div>
+
+    <div class="section-container single-card-section">
+      <div class="section-title">Director</div>
+      <div class="grid" id="currentDirector"></div>
+    </div>
+
+    <div class="section-container single-card-section">
+      <div class="section-title">Principal</div>
+      <div class="grid" id="currentPrincipal"></div>
+    </div>
+
+    <div class="double-column">
+      <div class="section-container"><div class="section-title">Junior High School Teachers</div><div class="grid" id="juniorHigh"></div></div>
+      <div class="section-container"><div class="section-title">Senior High School Teachers</div><div class="grid" id="seniorHigh"></div></div>
+    </div>
+
+    <div class="section-container"><div class="section-title">Elementary Teachers</div><div class="grid" id="elementary"></div></div>
+    <div class="section-container"><div class="section-title">Administrative Staff</div><div class="grid" id="adminStaff"></div></div>
+    <div class="section-container"><div class="section-title">Other School Personnel</div><div class="grid" id="otherPersonnel"></div></div>
+
+    <div class="form-section">
+      <h3>Add Staff</h3>
+      <input id="name" placeholder="Full Name">
+      <input id="advisory" placeholder="Advisory Class (optional)">
+      <select id="position">
+        <option value="">Select Position</option>
+        <option value="former director">Former Director</option>
+        <option value="director">Director</option>
+        <option value="principal">Principal</option>
+        <option value="junior high teacher">Junior High School Teacher</option>
+        <option value="senior high teacher">Senior High School Teacher</option>
+        <option value="elementary teacher">Elementary Teacher</option>
+        <option value="admin staff">Administrative Staff</option>
+        <option value="other personnel">Other School Personnel</option>
+      </select>
+      <input type="file" id="imageFile" accept="image/*">
+      <button onclick="addStaff()">Add</button>
+    </div>
+  </div>
+
+  <script src="faculty&staff.js"></script>
+</body>
+</html>

@@ -1,0 +1,147 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+    position: relative; /* Make sure the body is positioned relative */
+}
+
+body::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('https://scontent.fmnl3-4.fna.fbcdn.net/v/t39.30808-6/488191217_1867630587303839_1863587057669991825_n.jpg?stp=dst-jpg_p600x600_tt6&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFo5uLwQGn-DFne4k9wi-WCHNSp9Qp_nZEc1Kn1Cn-dkZVA1gPkHG6_YkOv0Cc_YgndTdZJDz4pUX1Nk64K99MY&_nc_ohc=NssndMLxpMAQ7kNvwEH5aMA&_nc_oc=AdmQZq4o0mZj3kj2JdSpUOgAs4I_H5PwAQJmWy7iCsB3MLwlOmymfkDpMszKYBQfByM&_nc_zt=23&_nc_ht=scontent.fmnl3-4.fna&_nc_gid=ni1wCaRDZ7504uk2ZudtiA&oh=00_AfGKFikUHxwgTKh4qAUEJzVJDVIuigrpb-v4rFTk6C3ntA&oe=67F809CA') no-repeat center center fixed; /* Background image */
+    background-size: cover; /* Ensures the image covers the entire page */
+    opacity: 0.5; /* Adjust this value for transparency (0 is fully transparent, 1 is fully opaque) */
+    z-index: -1; /* Ensure the overlay is behind other content */
+}
+
+header {
+    background-color: #1e3a8a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+}
+
+.profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.sidebar {
+    width: 200px;
+    background-color: #60d5e7;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar a {
+    display: block;
+    color: #000;
+    padding: 15px 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: #b4f0f8;
+}
+
+.admin-contact {
+    font-size: 12px;
+    padding: 10px 20px;
+    color: #003b4a;
+    margin-top:410px;
+}
+
+.content {
+    margin-left: 200px;
+    padding: 20px;
+    background: url('school-bg.jpg') no-repeat center center;
+    background-size: cover;
+    height: calc(100vh - 60px);
+    box-sizing: border-box;
+}
+
+.search-bar {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+    position: relative;
+    margin-top: 50px;
+  }
+
+  .search-bar input[type="text"] {
+    width: 50%;
+    padding: 10px 20px 10px 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #3d4e84;
+    color: white;
+    font-size: 16px;
+    
+  }
+
+  .search-icon {
+    position: absolute;
+    left: 20%;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+  }
+
+.top-icons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.icon-box {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+    width: 100px;
+}
+
+.mission-vision {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 100px;
+}
+
+.mv-box {
+    width: 250px;
+    height: 200px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 24px;
+    font-weight: bold;
+}

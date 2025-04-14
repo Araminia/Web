@@ -1,0 +1,250 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f4f4f4;
+    
+  }
+  
+  body::before {
+    content: ""; /* Required for pseudo-elements */
+    position: absolute; /* Position it absolutely */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-size: cover; /* Ensures the image covers the entire page */
+    opacity: 0.21; /* Adjust this value for transparency (0 is fully transparent, 1 is fully opaque) */
+    z-index: -1; /* Ensure the overlay is behind other content */
+    background-color:  white;
+  }
+  header {
+  background-color: #1e3a8a;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 25px;
+  position: fixed;       /* fix it to the top */
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1002;         /* above sidebar */
+  height: 60px;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+  
+  /* Hide the checkbox */
+   #toggle {
+    display: none;
+  }
+  /* Hamburger Icon */
+   .hamburger {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    width: 30px;
+    height: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    z-index: 1001;
+    cursor: pointer;
+    margin-top: 50px;
+  }
+  
+  .hamburger span {
+    height: 4px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 2px;
+    transition: 0.3s;
+  }
+  
+  
+  /* Sidebar */
+  .sidebar {
+    position: fixed;
+    top: 60px;               /* push it down below header */
+    left: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #60d5e7;
+    color: white;
+    padding: 40px 20px 20px;
+    transition: 0.3s;
+    z-index: 1000;
+  }
+  
+  .sidebar a {
+  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+  color: rgb(24, 23, 23);
+  text-decoration: none;
+  margin: 15px 0;
+  padding: 12px 16px;
+  border-radius: 8px;
+  font-size: 24px;
+  font-weight: 500;
+  transition: background 0.2s;
+  font-family: 'Times New Roman', Times, serif;
+  letter-spacing: 0.2px;
+  line-height: 0.3;
+  text-align: left; /* Aligns text to the left */
+  }
+  
+  .sidebar a i {
+  margin-right: 10px;
+  color: #213766;
+  }  
+  
+  
+  .sidebar a:hover {
+    background-color: #2f80a3;
+  }
+  
+  /* Main Content */
+  .main-content {
+    padding: 40px 20px 20px 20px;
+    margin-left: 0;
+    transition: 0.3s;
+  }
+  
+  #toggle:checked ~ .sidebar {
+    left: 0;
+  }
+  
+  #toggle:checked ~ .main-content {
+    margin-left: 250px;
+  }
+  
+  /* Hamburger Animation */
+  #toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+  }
+  
+  #toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+  }
+  
+  #toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+  }
+  
+  .admin-contact {
+    font-size: 12px;
+    padding: 10px 20px;
+    color: #003b4a;
+    margin-top:300px;
+  }
+  .main {
+    margin-left: 230px; /* Slightly increased from 200px */
+    padding: 20px;
+    height: calc(100vh - 50px);
+    overflow-y: auto;
+    margin-top: 50px; 
+  }
+  .breadcrumb {
+    color: #1c355e;
+    margin-bottom: 10px;
+    margin-right: 200px;
+    margin-left: 10px;
+    text-decoration: none;         /* Removes underline */
+    font-family: Georgia, 'Times New Roman', Times, serif; /* You can change this to any font you prefer */
+  }
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+    margin-right:930px;
+  }
+ .offerings-container {
+  max-width: 100%;
+  margin: 20px auto 0 auto;
+  margin-right: 390px; /* aligned with sidebar */
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px; /* spacing between cards */
+  justify-content: flex-start;
+  margin-left: 15px;
+}
+
+.offering-card {
+  flex: 1 1 calc(33.333% - 20px);
+  min-width: 250px;
+  max-width: 300px;
+  min-height: 280px;
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+
+  .offering-card input,
+  .offering-card textarea {
+    width: 100%;
+    border: none;
+    background: transparent;
+    font-size: 16px;
+    resize: none;
+  }
+  .offering-card input:focus,
+  .offering-card textarea:focus {
+    outline: 2px solid #007bff;
+    background: #f9f9f9;
+  }
+  .actions {
+    position: absolute;
+    top: 16px;
+    right: 16px;
+  }
+  .actions button {
+    background: transparent;
+    border: none;
+    color: red;
+    cursor: pointer;
+    font-size: 18px;
+  }
+  .add-button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  .add-button:hover {
+    background: #0056b3;
+  }
